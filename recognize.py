@@ -1,9 +1,17 @@
 import os
 import subprocess
+import sys
 
-# Đường dẫn thư mục tool cùng cấp với file hiện tại
-exepath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tool/ocrs')
+# Thêm hàm get base path giống như trong main.py
+def get_base_path():
+    if getattr(sys, 'frozen', False):
+        return sys._MEIPASS
+    else:
+        return os.path.dirname(os.path.abspath(__file__))
 
+# Sử dụng base_path thay vì __file__
+base_path = get_base_path()
+exepath = os.path.join(base_path, 'tool', 'ocrs')
 
 def execute_command(command):
     command = f'cd /D "{exepath}" && {command}'
@@ -33,20 +41,18 @@ def recognize(imagepath):
     output_dir = os.path.join(parent_dir, 'output', name)
     os.makedirs(output_dir, exist_ok=True)
 
-    # Đường dẫn file kết quả
     txt_path = os.path.join(output_dir, 'content.txt')
     json_path = os.path.join(output_dir, 'content.json')
     png_path = os.path.join(output_dir, 'annotated.png')
 
-    # Lệnh ocrs
+
     cmd_txt = f'ocrs "{imagepath}" -o "{txt_path}"'
     cmd_json = f'ocrs "{imagepath}" --json -o "{json_path}"'
     cmd_png = f'ocrs "{imagepath}" --png -o "{png_path}"'
 
-    # Chạy 3 lệnh song song và thu kết quả
     check = execute_command(cmd_txt) & execute_command(cmd_json) & execute_command(cmd_png)
     if not check:
         return "Error executing OCR commands."
     return png_path
 
-# print(recognize("F:\\OutSource\\CHK34\\Intel DA\\DEMO\\image\\input\\img4.png"))
+print(recognize("F:\\OutSource\\CHK34\\Intel DA\\DEMO\\image\\input\\img4.png"))
