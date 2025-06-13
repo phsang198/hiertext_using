@@ -13,7 +13,5 @@ The models are trained exclusively on datasets which are a) open and b) have non
 Pre-trained models are available from [HuggingFace](https://huggingface.co/robertknight/ocrs) as PyTorch checkpoints,
 [ONNX](https://onnx.ai) and [RTen](https://github.com/robertknight/rten) models.
 
-### install :
-git clone https://github.com/robertknight/ocrs.git
-cd ocrs
-cargo run -p ocrs-cli -r -- image.png
+### Install :
+- git clone https://github.com/robertknight/ocrs.git
