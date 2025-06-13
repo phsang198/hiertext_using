@@ -15,3 +15,6 @@ Pre-trained models are available from [HuggingFace](https://huggingface.co/rober
 
 ### Install :
 - git clone https://github.com/robertknight/ocrs.git
+
+### Demo application:
+[text](https://drive.google.com/file/d/19jF74UDgU-K7vKYyodfj-n6KT-Ei8oUA/view?usp=sharing)
