@@ -1,0 +1,6 @@
+build
+deps
+incremental
+ocrs.exe
+ocrs.pdb
+.fingerprint
