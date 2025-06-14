@@ -1,6 +1,6 @@
 # Thư viện chính
-torch>=1.10.0  # PyTorch, cần thiết cho mô hình Swin Transformer
-transformers>=4.30.0  # Thư viện Hugging Face Transformers để tải mô hình
+torch>=1.10.0  # PyTorch
+transformers>=4.30.0  # Thư viện Hugging Face 
 Pillow>=9.0.0  # Thư viện xử lý ảnh (PIL)
 
 tkinter  # Thư viện giao diện người dùng
