@@ -2,7 +2,7 @@
 OCRS
 ![alt text](intro.png)
 
-Link: https://github.com/robertknight/ocrs
+Link: https://github.com/robertknight/ocrs-models
 ## Datasets
 
 The models are trained exclusively on datasets which are a) open and b) have non-restrictive licenses. This currently includes:
@@ -14,7 +14,7 @@ Pre-trained models are available from [HuggingFace](https://huggingface.co/rober
 [ONNX](https://onnx.ai) and [RTen](https://github.com/robertknight/rten) models.
 
 ### Install :
-- git clone https://github.com/robertknight/ocrs.git
+- git clone https://github.com/robertknight/ocrs-models
 
 ### Demo application:
 [Link for download](https://drive.google.com/file/d/19jF74UDgU-K7vKYyodfj-n6KT-Ei8oUA/view?usp=sharing)
